@@ -257,7 +257,7 @@ export class BrowserlessClient {
           });
         });
 
-        ws.on('error', (error) => {
+        ws.on('error', (error: Error) => {
           resolve({
             success: false,
             error: `WebSocket connection failed: ${error.message}`,
